@@ -4,6 +4,7 @@ var fn_movie = function(argument) {
     `http://www.omdbapi.com/?t=${argument}&y=&plot=short&apikey=trilogy`,
     function(error, response, body) {
       if (!error && response.statusCode === 200) {
+        console.log("<<<<< MOVIE >>>>>");
         console.log("Title of the movie is: " + JSON.parse(body).Title);
         console.log("Year the movie came out: " + JSON.parse(body).Year);
         console.log("IMDB Rating is: " + JSON.parse(body).imdbRating);
@@ -19,6 +20,7 @@ var fn_movie = function(argument) {
         console.log("Language of the movie is: " + JSON.parse(body).Language);
         console.log("Plot of the movie is: " + JSON.parse(body).Plot);
         console.log("Actors in the movie is: " + JSON.parse(body).Actors);
+        console.log("<<<<< MOVIE END>>>>>");
       }
     }
   );

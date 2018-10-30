@@ -3,6 +3,7 @@ var request = require("request");
 var OMDB = require("./omdb");
 var CONCERT = require("./concert.js");
 var SPOTIFY = require("./spotify.js");
+var async = require("async-foreach").forEach;
 var command = process.argv[2];
 var argument = process.argv.slice(3).join(" ");
 function liri(command, argument) {
@@ -35,6 +36,7 @@ if (command === "do-what-it-says") {
     console.log(a);
     command = a[0].trim();
     argument = a[1].substring(1, a[1].length - 1);
+    console.log(argument);
     liri(command, argument);
   });
 }

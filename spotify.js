@@ -4,7 +4,7 @@ var Spotify = require("node-spotify-api");
 const spotify = new Spotify(keys.spotify);
 
 var fn_spotify = function(argument) {
-  spotify.search({ type: "track", query: argument, limit: 15 }, function(
+  spotify.search({ type: "track", query: argument, limit: 5 }, function(
     err,
     data
   ) {
@@ -36,6 +36,7 @@ var fn_spotify = function(argument) {
       console.log(album);
       console.log("Preview Link: " + link);
       console.log("««««««««««««««««««««««««««««««««««««««««««««");
+      console.log("\n");
     }
   });
 };

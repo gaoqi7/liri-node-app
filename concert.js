@@ -15,7 +15,7 @@ var concert = function(arg) {
           let t = elem.datetime.split("T");
           let mt = moment(t[0], "YYYY-MM-DD").format("MM-DD-YYYY");
           console.log(
-            "%s will have a concert in %s,located in %s,%s at %s.",
+            "%s will have a concert in %s,located in %s,%s at %s.\n",
             arg,
             elem.venue.name,
             elem.venue.city,
